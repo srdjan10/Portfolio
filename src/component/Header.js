@@ -1,14 +1,6 @@
-import React from "react"
-import '../component/Header.css'
+import React from "react";
 
-
-
-const Header =()=>{
-
-    return(
-        <div className="back">
-        </div>
-    )
-
-}
-export default Header
+const Header = () => {
+  return <div></div>;
+};
+export default Header;

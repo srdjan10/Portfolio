@@ -1,38 +1,62 @@
-import React from "react"
-import '../component/Footer.css'
-import downloadFileName from 'C:/Users/Srdjan/portfolio/src/cv/Srdjan_Ilic_CV.pdf'
-import downloadFileNameENG from 'C:/Users/Srdjan/portfolio/src/cv/Srdjan_Ilic_CV_ENG.pdf'
+import React from "react";
+import { motion as m } from "framer-motion";
 
-const Footer =()=>{
+import downloadFileName from "C:/Users/Srdjan/portfolio/src/cv/Srdjan_Ilic_CV.pdf";
+import downloadFileNameENG from "C:/Users/Srdjan/portfolio/src/cv/Srdjan_Ilic_CV_ENG.pdf";
 
-const currentYear = new Date().getFullYear()
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
 
-return(
-        <footer className="foot">
-        <a href="mailto:srdjanilic10@gmail.com" target="_blank">
+  return (
+    <m.footer
+      initial={{ y: "100%" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 2.75, ease: "easeOut" }}
+      class="relative inset-x-0 bottom-0 h-10 text-center text-sm"
+    >
+      <button class="transition ease-in-out delay-150 selection:hover:-translate-y-3 hover:scale-110 duration-300 ...">
+        <a
+          href="mailto:srdjanilic10@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           Need any help, you contact me!
         </a>
-        <span> / </span>
-        <a
-          href="https://github.com/srdjan10/" target="_blank"
-        >
+      </button>
+      <span> / </span>
+      <button class="transition ease-in-out delay-150 selection:hover:-translate-y-3 hover:scale-110 duration-300 ...">
+        <a href="https://github.com/srdjan10/" target="_blank" rel="noreferrer">
           View Source on Github
         </a>
-        <span> / </span>
-        <a href={downloadFileName} download="Srdjan_Ilic_CV_SRB" target='_blank'
+      </button>
+      <span> / </span>
+      <button class="transition ease-in-out delay-150 selection:hover:-translate-y-3 hover:scale-110 duration-300 ...">
+        <a
+          href={downloadFileName}
+          download="Srdjan_Ilic_CV_SRB"
+          target="_blank"
+          rel="noreferrer"
         >
           Download CV (SRB)
         </a>
-        <span> / </span>
-        <a href={downloadFileNameENG} download="Srdjan_Ilic_CV_ENG" target='_blank'
+      </button>
+
+      <span> / </span>
+      <button class="transition ease-in-out delay-150 selection:hover:-translate-y-3 hover:scale-110 duration-300 ...">
+        <a
+          href={downloadFileNameENG}
+          download="Srdjan_Ilic_CV_ENG"
+          target="_blank"
+          rel="noreferrer"
         >
           Download CV (ENG)
         </a>
-        <p>
-        &copy; {currentYear} <strong>Portfolio</strong> - Srdjan Ilic Cacak
-        </p>
-        </footer>
-    )
+      </button>
 
-}
-export default Footer
+      <p class="flex justify-center">
+        &copy; {currentYear} <strong>Portfolio</strong> - Srdjan Ilic Cacak
+      </p>
+    </m.footer>
+  );
+};
+export default Footer;

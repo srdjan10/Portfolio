@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "TRAINONE-REGULAR";
+  src: url("../public/fonts/TrainOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "DynaPuff_Condensed-SemiBold";
+  src: url("../public/fonts/DynaPuff_Condensed-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "DynaPuff_Condensed-Medium";
+  src: url("../public/fonts/DynaPuff_Condensed-Medium.ttf");
+}
